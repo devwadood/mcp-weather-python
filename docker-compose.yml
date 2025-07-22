@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  weather-backend:
+    build: .
+    image: weather-mcp-backend:latest
+    env_file:
+      - .env
+    ports:
+      - "8009:8009"
+    restart: unless-stopped
